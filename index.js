@@ -1,10 +1,11 @@
 // My blog API
 // Set up the application and its router
-const Koa = require('koa');
-const Router = require('koa-router');
-
-const app = new Koa();
-const router = new Router();
+const Koa = require('koa')
+const static = require('koa-static-router')
+const app = new Koa()
+const special = require('./routes/special')
+const articles = require('./routes/articles')
+const user = require('./routes/users')
 
 /*
 * Define route handler(s):
@@ -14,7 +15,8 @@ const router = new Router();
 * to JavaScript functions that handle the request.
 *
 * Once defined we then add them to the app object.
-*/ router.get('/api/v1', welcomeAPI);
+*/
+router.get('/api/v1', welcomeAPI);
 app.use(router.routes());
 // Define the actual handler functions
 function welcomeAPI(ctx, next) {
