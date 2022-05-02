@@ -17,7 +17,10 @@ const user = require('./routes/users')
 * Once defined we then add them to the app object.
 */
 router.get('/api/v1', welcomeAPI);
-app.use(router.routes());
+app.use(special.routes())
+app.use(articles.routes())
+app.use(user.routes())
+app.use(static({ dir: 'docs', router: '/doc/' }))
 // Define the actual handler functions
 function welcomeAPI(ctx, next) {
   ctx.body = {
@@ -25,4 +28,6 @@ function welcomeAPI(ctx, next) {
   }
 }
 // Finally, run the app as a process on a given port
-app.listen(3000);
+let port = process.env.PORT || 10888;
+app.listen(port);
+console.log('API is ready')

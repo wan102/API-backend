@@ -2,6 +2,8 @@
 const Router = require('koa-router');
 // We are going to parse request bodies so import koa-bodyparser
 const bodyParser = require('koa-bodyparser');
+const model = require('../models/articles')
+const { validateArticle } = require('../controllers/validation')
 
 // Since we are handling articles use a URI that begins with an appropriate path
 const router = Router({ prefix: '/api/v1/articles' });
@@ -11,7 +13,7 @@ const router = Router({ prefix: '/api/v1/articles' });
 // a named route parameter. Here the name of the parameter will be 'id' 
 // and we will define the pattern to match at least 1 numeral.
 router.get('/', getAll);
-router.post('/', bodyParser(), createArticle);
+router.post('/', bodyParser(), validateArticle, createArticle)
 router.get('/:id([0-9]{1,})', getById);
 router.put('/:id([0-9]{1,})', updateArticle);
 router.del('/:id([0-9]{1,})', deleteArticle);

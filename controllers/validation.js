@@ -1,4 +1,4 @@
-const {Validator, ValidationError} = require('jsonschema')
+const { Validator, ValidationError } = require('jsonschema')
 const schema = require('../schemas/article.schema.js');
 const v = new Validator()
 
@@ -16,7 +16,7 @@ exports.validateArticle = async (ctx, next) => {
   } catch (error) {
     if (error instanceof ValidationError) {
       ctx.body = error
-      ctx.status = 400      
+      ctx.status = 400
     } else {
       throw error
     }
