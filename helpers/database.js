@@ -1,3 +1,4 @@
+// connect to mongoDB
 const mongoClient = require("mongodb").MongoClient
 const mongoAuth = require('../config')
 
