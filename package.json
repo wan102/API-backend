@@ -1,6 +1,14 @@
 {
   "dependencies": {
+    "jsonschema": "^1.4.0",
     "koa": "^2.13.4",
-    "koa-router": "^10.1.1"
+    "koa-bodyparser": "^4.3.0",
+    "koa-passport": "^4.1.4",
+    "koa-router": "^10.1.1",
+    "koa-static-router": "^1.5.0",
+    "mongodb": "^4.5.0",
+    "passport-http": "^0.3.0",
+    "role-acl": "^4.5.4",
+    "sequelize": "^6.19.0"
   }
 }

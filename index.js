@@ -16,7 +16,7 @@ const user = require('./routes/users')
 *
 * Once defined we then add them to the app object.
 */
-router.get('/api/v1', welcomeAPI);
+//router.get('/api/v1', welcomeAPI);
 app.use(special.routes())
 app.use(articles.routes())
 app.use(user.routes())
