@@ -1,8 +1,8 @@
 // My blog API
 // Set up the application and its router
 const Koa = require('koa')
-const static = require('koa-static-router')
 const app = new Koa()
+const static = require('koa-static-router')
 const special = require('./routes/special')
 const articles = require('./routes/articles')
 const user = require('./routes/users')
@@ -16,7 +16,7 @@ const user = require('./routes/users')
 *
 * Once defined we then add them to the app object.
 */
-//router.get('/api/v1', welcomeAPI);
+
 app.use(special.routes())
 app.use(articles.routes())
 app.use(user.routes())

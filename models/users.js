@@ -5,13 +5,11 @@ exports.findByUsername = async function getByUsername(username) {
   const user = await db.run_query(query, [username])
   return user
 /*
-    let username = ctx.params.username
-  console.log(username)
-  let article = await db.getByIdMongo(username)
-  if (article) {
-    ctx.body = article[0]
+  const user = await dbMongo.run_query('users', {'username': parseInt(username)})
+console.log(user)
+return user
   }
-  */
+*/
 }
 
 //list all the articles in the database

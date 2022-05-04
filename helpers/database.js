@@ -11,6 +11,7 @@ const DATABASE_NAME = mongoAuth.configMongo.dbname
 exports.run_query = async function run_query(collection, query) {
   const dbClient = await mongoClient.connect(CONNECTION_URI)
   const result = await dbClient.db(DATABASE_NAME).collection(collection).find(query).toArray()
+  console.log(result)
   return result
 }
 
