@@ -20,7 +20,7 @@ router.del('/:id([0-9]{1,})', deleteArticle);
 
 // Now we define the handler functions used above.
 async function getAll(ctx, next) {
-  let articles = await model.getAllMongo()
+  let articles = await model.getAll()
   if (articles) {
     ctx.body = articles
   }
@@ -29,7 +29,7 @@ async function getAll(ctx, next) {
 async function getById(ctx) {
   let id = ctx.params.id
   console.log(id)
-  let article = await model.getByIdMongo(id)
+  let article = await model.getById(id)
   if (article) {
     ctx.body = article[0]
   }
@@ -37,7 +37,7 @@ async function getById(ctx) {
 
 async function createArticle(ctx) {
   const body = ctx.request.body
-  let result = await model.addMongo(body)
+  let result = await model.add(body)
   if (result) {
     ctx.status = 201
     ctx.body = result

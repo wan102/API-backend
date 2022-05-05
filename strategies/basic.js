@@ -1,7 +1,7 @@
 const BasicStrategy = require('passport-http').BasicStrategy
 const users = require('../models/users')
 
-const verifyPassword = function (user, password) {
+const verifyPassword = function(user, password) {
   // compare user.password with the password supplied
   return user.password === password
 }
