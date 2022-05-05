@@ -8,6 +8,7 @@ router.get('/', auth, getAll)
 
 async function getAll(ctx) {
   const permission = can.readAll(ctx.state.user)
+  console.log(ctx.state.user)
   if (!permission.granted) {
     ctx.status = 403;
   } else {

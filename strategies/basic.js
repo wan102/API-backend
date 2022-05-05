@@ -10,7 +10,6 @@ const checkUserAndPass = async (username, password, done) => {
   // look up the user and check the password if the user exists
   // call done() with either an error or the user, depending on outcome
   let result
-
   try {
     result = await users.findByUsername(username)
   } catch (error) {
@@ -29,7 +28,8 @@ const checkUserAndPass = async (username, password, done) => {
   } else {
     console.log(`No user found with username ${username}`)
   }
-  return done(null, false)  // username or password were incorrect
+  // username or password were incorrect
+  return done(null, false)  
 }
 
 const strategy = new BasicStrategy(checkUserAndPass)

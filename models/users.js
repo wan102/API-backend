@@ -1,7 +1,7 @@
 const dbMongo = require('../helpers/database')
 
 exports.findByUsername = async function getByUsername(username) {
-  const user = await dbMongo.run_query('users', { 'username': parent(username) })
+  const user = await dbMongo.run_query('users', { 'username': username })
   console.log(user)
   return user
 }

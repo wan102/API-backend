@@ -46,6 +46,43 @@ async function createArticle(ctx) {
 
 async function updateArticle(ctx) {
   // TODO edit an existing article
+/*
+  const userId = parseInt(ctx.params.id);
+  const method = ctx.params.method;
+  const body = ctx.request.body
+
+  if (userId && method === 'edit') {
+    const { name } = ctx.request.body;
+    const { email } = ctx.request.body;
+    const { interest } = ctx.request.body;
+
+    if (name && email && interest) {
+      let userName = name;
+      let userMail = email;
+      let userInterest = interest;
+
+      const newUserDataList = userDataList.find((item) => item.userId === userId);
+
+      if (newUserDataList) {
+        newUserDataList.userName = userName;
+        newUserDataList.userMail = userMail;
+        newUserDataList.userInterest = userInterest;
+        newUserDataList.modifiedTime = new Date();
+
+        ctx.body = {
+          stat: 'ok',
+          result: newUserDataList
+        };
+      } else {
+        ctx.status = 404;
+      }
+    } else {
+      ctx.status = 404;
+    }
+  } else {
+    ctx.status = 404;
+  }
+*/
 }
 
 async function deleteArticle(ctx) {
