@@ -1,5 +1,7 @@
-// connect to mongoDB
+// Connect to mongoDB
 const mongoClient = require("mongodb").MongoClient
+// Import the mongoose module
+var mongoose = require('mongoose');
 const mongoAuth = require('../config')
 
 const mongo_username = mongoAuth.configMongo.user
