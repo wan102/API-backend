@@ -31,4 +31,3 @@ function welcomeAPI(ctx, next) {
 let port = process.env.PORT || 10888;
 app.listen(port);
 console.log('API is ready')
-2
