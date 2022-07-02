@@ -3,27 +3,22 @@ const app = require('./common/app.test.js')
 
 const expected = {
         "id": 1,
-        "name": "tommy",
-        "birthday": "2017-01-01 12:0000.111",
-        "gender": "male",
-        "isneutered": true,
-        "note": null,
-        "status": "available",
-        "breed_id": 1,
-        "centre_id": 1
+        "email": "test1@gmail.com",
+        "user_name": test1,
+        "password": "Aa111111"
     }
 
 
 describe('Animals Testing Cases', ()=> {
   xit('Check the status code is correct', async() => {
     const res = await request(app.callback())
-      .get('/api/v1/animals')
+      .get('/api/v1/users')
       .send({})
   })
 
   it('Return all animals', async() => {
     const res = await request(app.callback())
-      .get('/api/v1/animals')
+      .get('/api/v1/users')
       .send({})
     expect(res.statusCode).toEqual(200)
     expect(res.type).toEqual("application/json")

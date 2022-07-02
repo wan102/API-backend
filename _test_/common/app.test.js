@@ -26,4 +26,4 @@ app.use(static({dir:'docs', router: '/doc/'}))
 let port = process.env.PORT || 10833;
 
 app.listen(port)
-console.log('Hello welcome to Petshop API. listen on port: 10833')
+console.log('Hello welcome to PetShelter API. listen on port: 10833')
