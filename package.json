@@ -1,0 +1,33 @@
+{
+  "name": "koa_pj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^3.3.0",
+    "fs-extra": "^10.1.0",
+    "jest": "^28.1.0",
+    "jsonschema": "^1.4.0",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-dom": "^1.0.0",
+    "koa-passport": "^4.1.4",
+    "koa-router": "^10.1.1",
+    "koa-static-router": "^1.5.0",
+    "koa2-formidable": "^1.0.3",
+    "mime-types": "^2.1.35",
+    "passport-http": "^0.3.0",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "role-acl": "^4.5.4",
+    "sequelize": "^6.19.0",
+    "supertest": "^6.2.3",
+    "twitter-api-v2": "^1.12.2"
+  },
+  "proxy": "http://localhost:3000"
+}
